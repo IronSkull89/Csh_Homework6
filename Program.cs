@@ -59,31 +59,48 @@ int CountPositive(int[] num)
 //Написать программу, которая на вход принимает массив из любого количества элементов (не менее 6)в промежутке от 0 до 100,
 //    а на выходе выводит этот же массив, но отсортированный по возрастанию(от меньшего числа к большему).
 
-int[] SortAscend(int[] Array)
-{
-    Boolean sort = false;
-    int Temp;
-    int length = Array.Length;
-    for (int j = 1; j < length; j++)
+//int[] SortAscend(int[] array)
+//{
+//    Boolean sort = false;
+//    int Temp;
+//    int length = array.Length;
+//    for (int j = 1; j < length; j++)
+//    {
+//        if (!sort)
+//        {
+//            for (int i = 0; i < length - j; i++)
+//            {
+//                sort = true;
+//                if (array[i] > array[i + 1])
+//                {
+//                    Temp = array[i];
+//                    array[i] = array[i + 1];
+//                    array[i + 1] = Temp;
+//                    sort = false;
+//                }
+//            }
+//        }
+//    }
+//    return array;
+//}
+int[] SortAscend(int[] array) 
+{ 
+if (!sort)
     {
-        if (!sort)
+    return SortAscend();
+    for (int i = 0; i < length - j; i++)
+    {
+        sort = true;
+        if (array[i] > array[i + 1])
         {
-            for (int i = 0; i < length - j; i++)
-            {
-                sort = true;
-                if (Array[i] > Array[i + 1])
-                {
-                    Temp = Array[i];
-                    Array[i] = Array[i + 1];
-                    Array[i + 1] = Temp;
-                    sort = false;
-                }
-            }
+            Temp = array[i];
+            array[i] = array[i + 1];
+            array[i + 1] = Temp;
+            sort = false;
         }
     }
-    return Array;
 }
-
+}
 
 //--------------------------------------------
 string? working = "y";
